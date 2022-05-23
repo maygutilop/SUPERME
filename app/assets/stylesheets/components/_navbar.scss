@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  padding-top: 13px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -8,5 +8,43 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 80px;
+}
+
+.searchInputWrapper {
+  position: absolute;
+  left: 500px;
+  width: 440px;
+}
+
+.searchInput {
+  color: white;
+  width: 100%;
+  height: 2rem;
+  padding: 0 1rem;
+  border-radius: 2rem;
+  border: none;
+  transition: transform 0.1s ease-in-out;
+  background-color: #ffffff54;
+}
+
+::placeholder {
+  color: #ffffff;
+  text-align: center;
+}
+
+/* hide the placeholder text on focus */
+:focus::placeholder {
+  text-indent: -999px
+}
+
+.searchInput:focus {
+  outline: none;
+  transform: scale(1.1);
+  transition: all 0.1s ease-in-out;
+}
+
+.container:focus-within >
+.searchInputWrapper > .searchInputIcon {
+  right: 0.2rem;
 }

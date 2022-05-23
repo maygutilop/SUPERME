@@ -1,3 +1,85 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<h1>new feature!!! please delete me later!!</h1>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<%# NAVBAR %>
+<div class="banner">
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Supreme_Logo.svg" >
+      </a>
+      <div class="searchInputWrapper">
+        <input class="searchInput" type="text" placeholder='Search'>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+            <li class="nav-item dropdown">
+              <img class="avatar" src="https://connectingcouples.us/wp-content/uploads/2019/07/avatar-placeholder.png" />
+            </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<%# BANNER %>
+  <div class="banner-info">
+    <h3>SUPERME</h3>
+    <h1>RENT A SUPERPOWER</h1>
+    <a class="btn-flat" href="#">All superpowers</a>
+  </div>
+</div>
+
+<%# CARDS %>
+<div class="container">
+  <div class="cards">
+    <div class="card-trip">
+      <img src="https://gcdn.lanetaneta.com/wp-content/uploads/2022/01/La-novela-grafica-Deadpool-de-Rob-Liefeld-se-serializara-en-780x470.jpeg" />
+      <div class="card-trip-infos">
+        <div>
+          <h2>Invulnerability</h2>
+          <p>Be as immortal as Deadpool!</p>
+        </div>
+        <h2 class="card-trip-pricing">£150.00</h2>
+        <img src="https://ae01.alicdn.com/kf/H4e4fd984ea3c439d89a0b5afa2934307b/Full-Square-Round-Drill-5D-Diy-Diamond-Painting-Superhero-Deadpool-Than-heart-humor-Cross-Stitch-Wedding.jpg_Q90.jpg_.webp" class="card-trip-user avatar-bordered" />
+      </div>
+    </div>
+     <div class="card-trip">
+      <img src="https://cbsnews1.cbsistatic.com/hub/i/r/2017/03/24/2227bf44-fc84-4fbf-a003-7c7711d2c3c7/thumbnail/1200x630/08c3c5d6903b0d7873b8f00f4265f0c5/wonder-woman-comic-book-heroine-promo.jpg" />
+      <div class="card-trip-infos">
+        <div>
+          <h2>Strength</h2>
+          <p>Have incredible power!</p>
+        </div>
+        <h2 class="card-trip-pricing">£99.99</h2>
+        <img src="https://pyxis.nymag.com/v1/imgs/1c7/e21/202bc362eaa4dae3edb7b5f2a25e9301bc-06-wonder-woman.rsquare.w700.jpg" class="card-trip-user avatar-bordered" />
+      </div>
+    </div>
+     <div class="card-trip">
+      <img src="https://pbs.twimg.com/media/EXBj1zMXYAE6DFM?format=jpg&name=medium" />
+      <div class="card-trip-infos">
+        <div>
+          <h2>Underwater mastery</h2>
+          <p>Become an Atlantean!</p>
+        </div>
+        <h2 class="card-trip-pricing">£99.99</h2>
+        <img src="https://pyxis.nymag.com/v1/imgs/a4d/424/6b1ad21ff64cb0e52e557f22e461e48b00-19-aquaman.rsquare.w700.jpg" class="card-trip-user avatar-bordered" />
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<%# FOOTER %>
+<div class="footer">
+  <div class="footer-links">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Supreme_Logo.svg" alt="">
+  </div>
+  <div class="footer-copyright">
+    © SUPERME - All rights reserved 2022
+  </div>
+</div>
