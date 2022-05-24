@@ -7,44 +7,27 @@
   </div>
 </div>
 
-<%# CARDS %>
-<div class="container">
-  <div class="cards">
-    <%# CARD %>
-    <div class="card-trip">
-      <img src="https://gcdn.lanetaneta.com/wp-content/uploads/2022/01/La-novela-grafica-Deadpool-de-Rob-Liefeld-se-serializara-en-780x470.jpeg" />
-      <div class="card-trip-infos">
-        <div>
-          <h2>Invulnerability</h2>
-          <p>Be as immortal as Deadpool!</p>
-        </div>
-        <h2 class="card-trip-pricing">£150.00</h2>
-        <img src="https://ae01.alicdn.com/kf/H4e4fd984ea3c439d89a0b5afa2934307b/Full-Square-Round-Drill-5D-Diy-Diamond-Painting-Superhero-Deadpool-Than-heart-humor-Cross-Stitch-Wedding.jpg_Q90.jpg_.webp" class="card-trip-user avatar-bordered" />
-      </div>
-    </div>
-    <%# CARD %>
-     <div class="card-trip">
-      <img src="https://cbsnews1.cbsistatic.com/hub/i/r/2017/03/24/2227bf44-fc84-4fbf-a003-7c7711d2c3c7/thumbnail/1200x630/08c3c5d6903b0d7873b8f00f4265f0c5/wonder-woman-comic-book-heroine-promo.jpg" />
-      <div class="card-trip-infos">
-        <div>
-          <h2>Strength</h2>
-          <p>Have incredible power!</p>
-        </div>
-        <h2 class="card-trip-pricing">£99.99</h2>
-        <img src="https://pyxis.nymag.com/v1/imgs/1c7/e21/202bc362eaa4dae3edb7b5f2a25e9301bc-06-wonder-woman.rsquare.w700.jpg" class="card-trip-user avatar-bordered" />
-      </div>
-    </div>
-    <%# CARD %>
-     <div class="card-trip">
-      <img src="https://pbs.twimg.com/media/EXBj1zMXYAE6DFM?format=jpg&name=medium" />
-      <div class="card-trip-infos">
-        <div>
-          <h2>Underwater mastery</h2>
-          <p>Become an Atlantean!</p>
-        </div>
-        <h2 class="card-trip-pricing">£99.99</h2>
-        <img src="https://pyxis.nymag.com/v1/imgs/a4d/424/6b1ad21ff64cb0e52e557f22e461e48b00-19-aquaman.rsquare.w700.jpg" class="card-trip-user avatar-bordered" />
-      </div>
-    </div>
-  </div>
+<div class="cards-index">
+  <ul>
+    <% @superpowers.first(6).each do |superpower| %>
+        <li>
+          <div class="card-superpower">
+            <img src="https://gcdn.lanetaneta.com/wp-content/uploads/2022/01/La-novela-grafica-Deadpool-de-Rob-Liefeld-se-serializara-en-780x470.jpeg" />
+            <div class="card-superpower-infos">
+              <div class="card-superpower-left">
+                <%= link_to superpower.name, superpower_path(superpower) %>
+                <%# <p><%= superpower.description%></p>
+                <p class="card-trip-pricing"><%= superpower.price%> € </p>
+              </div>
+              <%# <%= link_to "See details", superpower_path(superpower) %>
+              <div class="card-superpower-owner">
+                <img src="https://ae01.alicdn.com/kf/H4e4fd984ea3c439d89a0b5afa2934307b/Full-Square-Round-Drill-5D-Diy-Diamond-Painting-Superhero-Deadpool-Than-heart-humor-Cross-Stitch-Wedding.jpg_Q90.jpg_.webp" class="card-superpower-user avatar-bordered">
+                <p><%= superpower.user.username%></p>
+              </div>
+            </div>
+          </div>
+        </li>
+    <% end %>
+  </ul>
+   <%= link_to 'All superpowers', superpowers_path%>
 </div>
