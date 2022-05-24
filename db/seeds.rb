@@ -10,6 +10,7 @@ Superpower.destroy_all
 
 user = User.create(username: "Tamara", email: "tamara@gmail.com", password: "123456")
 
+<<<<<<< HEAD
 Superpower.create(name: "superpower 1", description: "description 1", price: "10,80",user: user)
 Superpower.create(name: "superpower 2", description: "description 1", price: "10,80",user: user)
 Superpower.create(name: "superpower 3", description: "description 1", price: "10,80",user: user)
@@ -25,3 +26,21 @@ Superpower.create(name: "superpower 12", description: "description 1", price: "1
 Superpower.create(name: "superpower 13", description: "description 1", price: "10,80",user: user)
 Superpower.create(name: "superpower 14", description: "description 1", price: "10,80",user: user)
 Superpower.create(name: "superpower 15", description: "description 1", price: "10,80",user: user)
+=======
+
+Superpower.create(name: "Invulnerability", description: "Be as immortal as Deadpool!", price: "200",user: user)
+Superpower.create(name: "Strength", description: "Have incredible power!", price: "500",user: user)
+Superpower.create(name: "Underwater mastery", description: "Become an Atlantean!", price: "350",user: user)
+Superpower.create(name: "Invisibility", description: "You go all see-through, obviously.", price: "400",user: user)
+Superpower.create(name: "Superhuman Strength", description: "You can pick up a car or play catch with a television.", price: "830",user: user)
+Superpower.create(name: "Flying", description: "The ground is further away than it used to be.", price: "525",user: user)
+Superpower.create(name: "Shapeshifting", description: "You take copying someone’s look to the extreme.", price: "200",user: user)
+Superpower.create(name: "Super Speed", description: "You can run a mile in seconds.", price: "250",user: user)
+Superpower.create(name: "Super Senses", description: "You hear someone at the door before the dog does.", price: "370",user: user)
+Superpower.create(name: "Telepathy/ Mind Control", description: "You're the only one who responds to someone thinking out loud (literally).", price: "590",user: user)
+Superpower.create(name: "Telekinesis", description: "Passing the salt is a lot less effort.", price: "600",user: user)
+Superpower.create(name: "Teleportation", description: "When you think of Egypt and suddenly you're on top of a pyramid.", price: "710",user: user)
+Superpower.create(name: "Power Absorbtion", description: "Hanging around with the X-Men is like being a kid in a candy store.", price: "890",user: user)
+Superpower.create(name: "Regenerative Power", description: "Plasters? What are plasters?", price: "500",user: user)
+Superpower.create(name: "Super-Stretching Abilities", description: "You're basically a human Cheesestring.", price: "770",user: user)
+>>>>>>> ad234523d344c131fffa10c3d31b35cb2e0e1a0b
