@@ -1,13 +1,20 @@
-<h1>My superpower</h1>
+<div class="pic" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path @superpower.photo.key, height: 300, width: 400, crop: :fill %>)">
 
-<%= cl_image_tag @superpower.photo.key, height: 300, width: 400, crop: :fill %>
-<h2><%= @superpower.name %></h2>
+  <div class="container">
+    <h1><%= @superpower.name %></h1>
+  </div>
+
+</div>
+
+<img src="https://ae01.alicdn.com/kf/H4e4fd984ea3c439d89a0b5afa2934307b/Full-Square-Round-Drill-5D-Diy-Diamond-Painting-Superhero-Deadpool-Than-heart-humor-Cross-Stitch-Wedding.jpg_Q90.jpg_.webp" class="card-superpower-user avatar-bordered">
+
+<p><%= @superpower.user.username%></p>
+
 <p><%= @superpower.description %></p>
-<p><%= @superpower.price %> €/day </p>
-<p><%= @superpower.user.username %></p>
+
+<%# <a class="btn btn-flat" href="#">Book now</a> %>
 
 
-
-<%= link_to 'All Superpowers', superpowers_path %>
-<%= link_to 'Create New Superpower', new_superpower_path %>
-<%= link_to 'Back to homepage', root_path %>
+<%= link_to 'All Superpowers', superpowers_path, class: "btn-home-end" %>
+<%= link_to 'Create New Superpower', new_superpower_path, class: "btn-home-end" %>
+<%= link_to 'Back to homepage', root_path, class: "btn-home-end" %>
