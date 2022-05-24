@@ -4,8 +4,8 @@
   <%= f.input :name %>
   <%= f.input :description %>
   <%= f.input :price %>
-  <%# <%= f.label :image %>
-  <%# <%= f.file_field :image %>
+  <%= f.label :image %>
+  <%= f.input :photo, as: :file %>
   <br>
   <%= f.button :submit, class: 'btn btn-primary' %>
 
