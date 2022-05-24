@@ -10,7 +10,6 @@ Superpower.destroy_all
 
 user = User.create(username: "Tamara", email: "tamara@gmail.com", password: "123456")
 
-
 Superpower.create(name: "superpower 1", description: "description 1", price: "10,80",user: user)
 Superpower.create(name: "superpower 2", description: "description 1", price: "10,80",user: user)
 Superpower.create(name: "superpower 3", description: "description 1", price: "10,80",user: user)
