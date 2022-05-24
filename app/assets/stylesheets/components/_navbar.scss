@@ -1,39 +1,42 @@
-.navbar-lewagon {
+.navbar {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.navbar-content {
+  width: 90vw;
+  display: flex;
   justify-content: space-between;
-  padding-top: 13px;
+  align-items: center;
+  // AVATAR
+  list-style: none;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
+// LOGO
+.superme-logo {
   width: 80px;
 }
 
-.searchInputWrapper {
-  position: absolute;
-  left: 500px;
-  width: 440px;
-}
 
+// SEARCHBAR
 .searchInput {
-  color: white;
-  width: 100%;
+  color: #4e4e4e;
+  width: 33vw;
   height: 2rem;
   padding: 0 1rem;
   border-radius: 2rem;
   border: none;
   transition: transform 0.1s ease-in-out;
-  background-color: #ffffff54;
+  background-color: #87878733;
 }
 
 ::placeholder {
-  color: #ffffff;
+  color: #4e4e4e;
   text-align: center;
 }
 
-/* hide the placeholder text on focus */
 :focus::placeholder {
   text-indent: -999px
 }
