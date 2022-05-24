@@ -1,4 +1,6 @@
 class SuperpowersController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
     @superpowers = Superpower.all
   end
@@ -9,8 +11,9 @@ class SuperpowersController < ApplicationController
 
   def create
     @superpower = Superpower.new(superpower_params)
+    @superpower.user = current_user
     if @superpower.save
-      redirect_to user_superpower_path(@superpower)
+      redirect_to superpower_path(@superpower)
     else
       render :new
     end
