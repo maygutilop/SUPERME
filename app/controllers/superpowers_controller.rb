@@ -14,6 +14,7 @@ class SuperpowersController < ApplicationController
     else
       render :new
     end
+  end
 
   def show
     @superpower = Superpower.find(params[:id])
@@ -23,8 +24,6 @@ private
 
   def superpower_params
     params.require(:superpower).permit(:name, :description, :price)
-  end
-
   end
 
 

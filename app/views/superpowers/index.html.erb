@@ -3,7 +3,13 @@
   <ul>
     <% @superpowers.each do |superpower| %>
       <div>
-      <li><%= link_to superpower.name, superpower_path(superpower) %></li>
+      <li>
+        <%= link_to superpower.name, superpower_path(superpower) %>
+        <p><%= superpower.description%></p>
+        <p><%= superpower.price%> € </p>
+        <p><%= superpower.user.username%></p>
+        <%= link_to "See details", superpower_path(superpower) %>
+      </li>
       </div>
     <% end %>
   </ul>
