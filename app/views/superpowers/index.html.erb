@@ -8,6 +8,7 @@
   <ul>
     <% @superpowers.each do |superpower| %>
         <li>
+<<<<<<< HEAD
           <div class="card-superpower">
             <img src="https://gcdn.lanetaneta.com/wp-content/uploads/2022/01/La-novela-grafica-Deadpool-de-Rob-Liefeld-se-serializara-en-780x470.jpeg" />
             <div class="card-superpower-infos">
@@ -23,6 +24,14 @@
               </div>
             </div>
           </div>
+=======
+          <%= cl_image_tag superpower.photo.key, height: 300, width: 400, crop: :fill %>
+          <%= link_to superpower.name, superpower_path(superpower) %>
+          <p><%= superpower.description%></p>
+          <p><%= superpower.price%> €/day </p>
+          <p><%= superpower.user.username%></p>
+          <%= link_to "See details", superpower_path(superpower) %>
+>>>>>>> 6f647155546609a6ab738d13163c490c9426aeb1
         </li>
     <% end %>
   </ul>
