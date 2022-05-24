@@ -1,4 +1,4 @@
-.btn-flat {
+.banner-info a {
   color: #ffffff;
   padding: 13px 34px;
   background: #ffffff54;
@@ -9,7 +9,22 @@
   transition: all 0.4s ease;
 }
 
-.btn-flat:hover {
+.banner-info a:hover {
   color: #d8d8d8;
   background: #aaaaaad4;
+}
+
+.notice {
+  position: absolute;
+  width: 100%;
+}
+
+.btn-signup {
+  color: #4e4e4e;
+  text-decoration: none;
+}
+
+.btn-signup:hover {
+  color: #4e4e4ea7;
+  transition: ease-in-out 0.2s;
 }
