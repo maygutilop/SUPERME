@@ -1,4 +1,11 @@
-<h1>My superpower (one)</h1>
+<h1>My superpower</h1>
+
+<h2><%= @superpower.name %></h2>
+<p><%= @superpower.description %></p>
+<p><%= @superpower.price %> € </p>
+<p><%= @superpower.user.username %></p>
+
+
 
 <%= link_to 'All Superpowers', superpowers_path %>
 <%= link_to 'Create New Superpower', new_superpower_path %>
