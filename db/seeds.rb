@@ -5,13 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 require "open-uri"
 User.destroy_all
 Superpower.destroy_all
 
 user = User.create(username: "Tamara", email: "tamara@gmail.com", password: "123456")
-
-
 
 file = URI.open('https://qph.fs.quoracdn.net/main-qimg-ef91a96cab141981eb9dc4dea28c05de-lq')
 superpower = Superpower.create(name: "Invulnerability", description: "Be as immortal as Deadpool!", price: "200",user: user)
