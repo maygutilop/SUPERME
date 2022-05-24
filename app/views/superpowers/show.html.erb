@@ -1,8 +1,9 @@
 <h1>My superpower</h1>
 
+<%= cl_image_tag @superpower.photo.key, height: 300, width: 400, crop: :fill %>
 <h2><%= @superpower.name %></h2>
 <p><%= @superpower.description %></p>
-<p><%= @superpower.price %> € </p>
+<p><%= @superpower.price %> €/day </p>
 <p><%= @superpower.user.username %></p>
 
 

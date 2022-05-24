@@ -9,13 +9,12 @@
     <% @superpowers.each do |superpower| %>
       <div>
         <li>
-          <img src="https://gcdn.lanetaneta.com/wp-content/uploads/2022/01/La-novela-grafica-Deadpool-de-Rob-Liefeld-se-serializara-en-780x470.jpeg" />
+          <%= cl_image_tag superpower.photo.key, height: 300, width: 400, crop: :fill %>
           <%= link_to superpower.name, superpower_path(superpower) %>
           <p><%= superpower.description%></p>
-          <p><%= superpower.price%> € </p>
+          <p><%= superpower.price%> €/day </p>
           <p><%= superpower.user.username%></p>
           <%= link_to "See details", superpower_path(superpower) %>
-          <img src="https://ae01.alicdn.com/kf/H4e4fd984ea3c439d89a0b5afa2934307b/Full-Square-Round-Drill-5D-Diy-Diamond-Painting-Superhero-Deadpool-Than-heart-humor-Cross-Stitch-Wedding.jpg_Q90.jpg_.webp" class="card-trip-user avatar-bordered" />
         </li>
       </div>
     <% end %>
