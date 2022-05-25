@@ -5,16 +5,31 @@
   </div>
 
 </div>
+<div class="price-user">
+  <p class="sprice"><%= @superpower.price%> €/day</p>
+  <div class="user-info">
+    <p><%= @superpower.user.username%></p>
+    <img src="https://ae01.alicdn.com/kf/H4e4fd984ea3c439d89a0b5afa2934307b/Full-Square-Round-Drill-5D-Diy-Diamond-Painting-Superhero-Deadpool-Than-heart-humor-Cross-Stitch-Wedding.jpg_Q90.jpg_.webp" class="card-superpower-user avatar-bordered">
+  </div>
+</div>
 
-<img src="https://ae01.alicdn.com/kf/H4e4fd984ea3c439d89a0b5afa2934307b/Full-Square-Round-Drill-5D-Diy-Diamond-Painting-Superhero-Deadpool-Than-heart-humor-Cross-Stitch-Wedding.jpg_Q90.jpg_.webp" class="card-superpower-user avatar-bordered">
-
-<p><%= @superpower.user.username%></p>
-
-<p><%= @superpower.description %></p>
-
+<div class="show-description">
+  <p><%= @superpower.description %></p>
+</div>
 <%# <a class="btn btn-flat" href="#">Book now</a> %>
 
+<div class="allshow">
+  <%= link_to 'All Superpowers', superpowers_path, class: "btn-home-end" %>
+</div>
 
-<%= link_to 'All Superpowers', superpowers_path, class: "btn-home-end" %>
-<%= link_to 'Create New Superpower', new_superpower_path, class: "btn-home-end" %>
-<%= link_to 'Back to homepage', root_path, class: "btn-home-end" %>
+<div class="icons">
+
+  <%= link_to new_superpower_path do %>
+  <i class="fas fa-plus-circle"></i>
+  <% end %>
+
+
+  <%= link_to root_path do %>
+  <i class="fas fa-home"></i>
+  <% end %>
+</div>

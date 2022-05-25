@@ -27,7 +27,14 @@
     <% end %>
   </ul>
 </div>
-<div class="btns-end">
-  <%= link_to 'Back to homepage', root_path, class: "btn-home-end" %>
-  <%= link_to 'Create New Superpower', new_superpower_path, class: "btn-home-end" %>
+<div class="index-icons">
+
+  <%= link_to new_superpower_path do %>
+  <i class="fas fa-plus-circle"></i>
+  <% end %>
+
+
+  <%= link_to root_path do %>
+  <i class="fas fa-home"></i>
+  <% end %>
 </div>
