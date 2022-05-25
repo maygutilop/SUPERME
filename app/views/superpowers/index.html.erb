@@ -7,6 +7,7 @@
 
   <div class="cards-index">
       <ul>
+      <% count = Superpower.count %>
     <% @superpowers.each do |superpower| %>
       <%= link_to superpower_path(superpower) do %>
         <li>
