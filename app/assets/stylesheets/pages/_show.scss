@@ -1,0 +1,75 @@
+.pic {
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 135px 0;
+  margin: 50px;
+  border-radius: 52px;
+  background-position: top;
+}
+
+.pic h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 100px;
+  font-weight: bold;
+}
+
+.container {
+  text-align: center;
+}
+.user-info{
+  margin-right: 88px;
+  display: flex;
+  align-items: center;
+  p {
+    margin-right: 16px;
+    margin-top: revert;
+  }
+}
+.show-description{
+  margin: 0px 50px 52px 50px;
+  text-align: justify;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1%);
+  display: flex;
+  align-items: center;
+  padding: 25px;
+  border-radius: 10px;
+}
+.allshow{
+  display: flex;
+  justify-content: center;
+}
+.fas{
+  color: #494949;
+  margin-left: 20px;
+  font-size: 25px;
+  text-decoration: none;
+}
+.price-user{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.sprice{
+  margin-left: 88px;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+.icons{
+  display: flex;
+  justify-content: end;
+  margin-right: 88px;
+}
+.index-icons{
+  display: flex;
+  justify-content: center;
+  margin-right: 88px;
+  margin-top: 50px;
+}
