@@ -1,18 +1,29 @@
+.index-background {
+  background: linear-gradient(180deg, #3886e5 0%, #0fd3ff 8%, whitesmoke 20%);
+
+}
+
 .banner {
+  background-image: linear-gradient(rgba(62, 62, 62, 0.1), rgba(32, 32, 32, 0.1)), url('https://wallpaperaccess.com/full/955094.jpg') ;
   width: 100vw;
-  height: 650px;
+  height: 95vh;
   background-size: cover;
   background-position: center;
-  background-image: linear-gradient(rgba(62, 62, 62, 0.1), rgba(32, 32, 32, 0.1)), url('https://wallpaperaccess.com/full/955094.jpg') ;
   text-align: right;
   margin-bottom: 30px;
+  display: flex;
 }
 
 .banner-info {
-  position: relative;
-  width: 700px;
-  left: 750px;
-  top: 180px;
+  width: 100%;
+  height: 100%;
+  justify-content: right;
+  align-items: center;
+  display: flex;
+  margin-right: 8vw;
+}
+
+.banner-info-text {
   text-align: center;
 }
 
@@ -21,7 +32,6 @@
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 60px;
-  margin-bottom: 30px;
 }
 
 .banner h3 {
@@ -29,15 +39,18 @@
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 45px;
+  margin-bottom: 30px;
 }
+
 
 .banner-index {
   width: 100vw;
+  height: 40vh;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 100px 0;
-  background: linear-gradient(180deg, #3886e5 0%, hsla(191, 100%, 53%, 1) 50%, hsla(0, 0%, 96%, 1) 98%);
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
