@@ -1,10 +1,11 @@
 <%# BANNER %>
 <div class="banner">
   <div class="banner-info">
-    <div class="banner-info-text">
-      <h1>SUPERME</h1>
-      <h3>RENT A SUPERPOWER</h3>
-      <%= link_to 'All superpowers', superpowers_path, class: "btn-flat"%>
+    <h3>SUPERME</h3>
+    <h1>RENT A SUPERPOWER</h1>
+    <div class="frame">
+      <%# <button><span><%= link_to 'All superpowers', superpowers_path, class: "custom-btn btn-flat"%></span></button>
+      <%= link_to '<button class="custom-btn btn-flat"><span>All superpowers</span></button>'.html_safe, superpowers_path %>
     </div>
   </div>
 </div>
@@ -34,6 +35,6 @@
     <% end %>
   </ul>
   <div class="btns-end">
-   <%= link_to 'All superpowers', superpowers_path, class: "btn-home-end"%>
+  <%= link_to '<button class="custom-btn btn-flat"><span>All superpowers</span></button>'.html_safe, superpowers_path %>
   </div>
 </div>
