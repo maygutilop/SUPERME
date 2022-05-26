@@ -54,15 +54,14 @@ ActiveRecord::Schema.define(version: 2022_05_26_083421) do
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
-  # create_table "reviews", force: :cascade do |t|
-  #   t.string "content"
-  #   t.integer "rating"
-  #   t.bigint "superpower_id", null: false
-  #   t.datetime "created_at", precision: 6, null: false
-  #   t.datetime "updated_at", precision: 6, null: false
-  #   t.index ["superpower_id"], name: "index_reviews_on_superpower_id"
-  # end
-  # a user has many reviews through bookings / a review belongs to a booking
+  create_table "reviews", force: :cascade do |t|
+    t.string "content"
+    t.integer "rating"
+    t.bigint "superpower_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["superpower_id"], name: "index_reviews_on_superpower_id"
+  end
 
   create_table "superpowers", force: :cascade do |t|
     t.string "name"

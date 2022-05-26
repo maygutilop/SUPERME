@@ -1,7 +1,3 @@
-.index-background {
-  background: linear-gradient(180deg, #3886e5 0%, #0fd3ff 8%, whitesmoke 25%);
-}
-
 .banner {
   background-image: linear-gradient(rgba(62, 62, 62, 0.1), rgba(32, 32, 32, 0.1)), url('https://wallpaperaccess.com/full/955094.jpg') ;
   width: 100vw;
@@ -41,23 +37,4 @@
   font-weight: 300;
   font-size: 45px;
   margin-bottom: 30px;
-}
-
-
-.banner-index {
-  width: 100vw;
-  height: 40vh;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 100px 0;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-}
-
-.banner-index h1 {
-  color: #f0f0f0;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  font-size: 60px;
 }
