@@ -9,5 +9,6 @@ class PagesController < ApplicationController
     @user = current_user
     @bookings = Booking.all
     @superpower = Superpower.all
+    @reviews = Review.all
   end
 end
