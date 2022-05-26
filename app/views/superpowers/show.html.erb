@@ -1,54 +1,5 @@
-<%
-=begin%>
-
-<div class="pic" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path @superpower.photo.key, height: 300, width: 400, crop: :fill %>)">
-
-  <div class="container">
-    <h1><%= @superpower.name %></h1>
-  </div>
-
-</div>
-<div class="price-user">
-  <p class="sprice"><%= @superpower.price.to_i%> €/day</p>
-  <div class="user-info">
-    <p><%= @superpower.user.username%></p>
-    <img src="https://ae01.alicdn.com/kf/H4e4fd984ea3c439d89a0b5afa2934307b/Full-Square-Round-Drill-5D-Diy-Diamond-Painting-Superhero-Deadpool-Than-heart-humor-Cross-Stitch-Wedding.jpg_Q90.jpg_.webp" class="card-superpower-user avatar-bordered">
-  </div>
-</div>
-
-<div class="show-description">
-  <p><%= @superpower.description %></p>
-</div>
-<%# <a class="btn btn-flat" href="#">Book now</a> %>
-
-<h2>Book this superpower!</h2>
-<div class="datepicker-form" data-controller="flatpickr">
-  <%= simple_form_for [ @superpower, @booking ] do |f| %>
-    <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-    <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-    <%= f.submit "Book superpower", class: "btn btn-primary" %>
-    <% end %>
-</div>
 
 
-  <div class="btns-end frame">
-    <%= link_to '<button class="custom-btn btn-flat"><span>All superpowers</span></button>'.html_safe, superpowers_path %>
-  </div>
-
-<div class="icons">
-
-  <%= link_to new_superpower_path do %>
-  <i class="fas fa-plus-circle"></i>
-  <% end %>
-
-
-  <%= link_to root_path do %>
-  <i class="fas fa-home"></i>
-  <% end %>
-</div>
-
-<%
-=end %>
 
 
 <div class="superpower-show">
@@ -62,11 +13,24 @@
       </div>
       <div class="superpower-show-info-important">
       <p><%= @superpower.price%> €/day</p>
-      <p>avg rewviw</p>
+      <p>Reviews</p>
       </div>
+
+    <h4>Book this superpower</h4>
+    <div class="datepicker-form" data-controller="flatpickr">
+      <%= simple_form_for [ @superpower, @booking ] do |f| %>
+      <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <div class="btn-book-frame">
+      <%= f.submit "Book superpower", class: "btn-book btn-book-flat" %>
+      </div>
+      <% end %>
+    </div>
+
     <div class="btn-book-frame">
       <%= link_to '<button class="btn-book btn-book-flat"><span>Book now</span></button>'.html_safe, superpowers_path %>
     </div>
+
     <div class="superpower-show-info-owner">
       <p><%= @superpower.user.username%></p>
       <img src="https://ae01.alicdn.com/kf/H4e4fd984ea3c439d89a0b5afa2934307b/Full-Square-Round-Drill-5D-Diy-Diamond-Painting-Superhero-Deadpool-Than-heart-humor-Cross-Stitch-Wedding.jpg_Q90.jpg_.webp" class="card-superpower-user avatar-bordered">
@@ -74,13 +38,6 @@
   </div>
 </div>
 
-<div class="icons-show">
-  <%= link_to new_superpower_path do %>
-  <i class="fas fa-plus-circle"></i>
-  <% end %>
-
-
-  <%= link_to root_path do %>
-  <i class="fas fa-home"></i>
-  <% end %>
-</div>
+  <div class="btns-end frame">
+    <%= link_to '<button class="custom-btn btn-flat"><span>All superpowers</span></button>'.html_safe, superpowers_path %>
+  </div>
