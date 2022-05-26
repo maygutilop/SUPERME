@@ -4,4 +4,10 @@ class PagesController < ApplicationController
   def home
     @superpowers = Superpower.all
   end
+
+  def profile
+    @user = current_user
+    @bookings = Booking.all
+    @superpower = Superpower.all
+  end
 end

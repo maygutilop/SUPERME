@@ -1,0 +1,24 @@
+<h1>Hi <%= current_user.username %>! </h1>
+<p> <%= current_user.email %> </p>
+
+<h2><strong>All your bookings</strong></h2>
+
+<% if @bookings.empty? %>
+  <p>You don't have any bookings</p>
+<% else %>
+  <% current_user.bookings.each do |booking| %>
+  <h4> <%= booking.superpower.name %> </h4>
+  <p><strong>Start date:</strong> <%= booking.start_date %>
+  <br>
+  <strong>End date:</strong> <%= booking.end_date %>
+  <br>
+  <strong>Duration:</strong>
+    <% if booking.end_date && booking.start_date %>
+        <%= @duration = (((booking.end_date - booking.start_date).to_i + 1)) %>
+      <% end %>
+  <br>
+  <strong>Price:</strong> <%= (booking.superpower.price).to_i %> €/day
+  <br>
+  <strong>Total price:</strong> <%= ((booking.superpower.price) * @duration).to_i %> € </p>
+  <% end %>
+<% end %>

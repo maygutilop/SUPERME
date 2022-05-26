@@ -7,29 +7,29 @@
 
   <div class="cards-index">
       <ul>
-      <% count = Superpower.count %>
-    <% @superpowers.each do |superpower| %>
-      <%= link_to superpower_path(superpower) do %>
-        <li>
-            <div class="card-superpower">
-              <%= cl_image_tag superpower.photo.key, height: 300, width: 400, crop: :fill %>
-              <div class="card-superpower-infos">
-                <div class="card-superpower-left">
-                  <%# <%= link_to superpower.name, superpower_path(superpower) %>
-                  <h3 class="card-superpower-name"><%= superpower.name %></h3>
-                  <p class="card-superpower-pricing"><%= superpower.price%> € </p>
-                </div>
-                <%# <%= link_to "See details", superpower_path(superpower) %>
-                <div class="card-superpower-owner">
-                  <img src="https://ae01.alicdn.com/kf/H4e4fd984ea3c439d89a0b5afa2934307b/Full-Square-Round-Drill-5D-Diy-Diamond-Painting-Superhero-Deadpool-Than-heart-humor-Cross-Stitch-Wedding.jpg_Q90.jpg_.webp" class="card-superpower-user avatar-bordered">
-                  <p><%= superpower.user.username%></p>
-                </div>
-              </div>
-            </div>
-        </li>
-      <% end %>
-    <% end %>
-  </ul>
+        <% count = Superpower.count %>
+          <% @superpowers.each do |superpower| %>
+            <%= link_to superpower_path(superpower) do %>
+              <li>
+                  <div class="card-superpower">
+                    <%= cl_image_tag superpower.photo.key, height: 300, width: 400, crop: :fill %>
+                    <div class="card-superpower-infos">
+                      <div class="card-superpower-left">
+                        <%# <%= link_to superpower.name, superpower_path(superpower) %>
+                        <h3 class="card-superpower-name"><%= superpower.name %></h3>
+                        <p class="card-superpower-pricing"><%= superpower.price.to_i%> € </p>
+                      </div>
+                      <%# <%= link_to "See details", superpower_path(superpower) %>
+                      <div class="card-superpower-owner">
+                        <img src="https://ae01.alicdn.com/kf/H4e4fd984ea3c439d89a0b5afa2934307b/Full-Square-Round-Drill-5D-Diy-Diamond-Painting-Superhero-Deadpool-Than-heart-humor-Cross-Stitch-Wedding.jpg_Q90.jpg_.webp" class="card-superpower-user avatar-bordered">
+                        <p><%= superpower.user.username%></p>
+                      </div>
+                    </div>
+                  </div>
+              </li>
+            <% end %>
+          <% end %>
+      </ul>
   </div>
   <div class="index-icons">
 
