@@ -19,6 +19,6 @@
   <br>
   <strong>Price:</strong> <%= (booking.superpower.price).to_i %> €/day
   <br>
-  <strong>Total price:</strong> <%= ((booking.superpower.price) * @duration).to_i %> € </p>
+  <strong>Total price:</strong> <%= ((booking.superpower.price.to_i) * @duration).to_i %> € </p>
   <% end %>
 <% end %>
