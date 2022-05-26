@@ -12,6 +12,7 @@
 .cards-index li {
   color: black;
   text-decoration: none;
+
 }
 
 .cards-index a {
@@ -20,11 +21,13 @@
 }
 
 .card-superpower {
+  position: relative;
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 10px;
   transition: all 0.3s ease ;
+
 }
 
 .card-superpower:hover {
@@ -53,10 +56,17 @@
 }
 
 .card-superpower-infos {
-  position: relative;
   padding: 5px 15px;
   display: flex;
   justify-content: space-between;
+  display: none;
+  background-color: white;
+}
+
+.card-superpower:hover .card-superpower-infos {
+  display: block;
+  position: absolute;
+  bottom: 0;
 }
 
 .card-superpower-owner {
