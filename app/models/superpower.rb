@@ -4,4 +4,5 @@ class Superpower < ApplicationRecord
   validates :description, presence: true
   validates :price, presence: true
   has_one_attached :photo
+  has_many :bookings, dependent: :destroy
 end

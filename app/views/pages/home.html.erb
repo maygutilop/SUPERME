@@ -23,7 +23,7 @@
                 <div class="card-superpower-left">
                   <%# <%= link_to superpower.name, superpower_path(superpower) %>
                   <h3 class="card-superpower-name"><%= superpower.name %></h3>
-                  <p class="card-superpower-pricing"><%= superpower.price%> € </p>
+                  <p class="card-superpower-pricing"><%= superpower.price.to_i%> € </p>
                 </div>
                 <%# <%= link_to "See details", superpower_path(superpower) %>
                 <div class="card-superpower-owner">

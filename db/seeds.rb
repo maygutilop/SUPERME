@@ -10,7 +10,7 @@ require "open-uri"
 User.destroy_all
 Superpower.destroy_all
 
-user = User.create(username: "Tamara", email: "tamara@gmail.com", password: "123456")
+user = User.create(username: "tamara", email: "tamara@gmail.com", password: "123456")
 
 file = URI.open('https://i.postimg.cc/QVZX3vxd/Deadpool-suicide-kinjs.jpg')
 superpower = Superpower.create(name: "Invulnerability", description: "You will be immune to any/all forms of physical damage and harm regardless of its type or level of power, unable to feel physical pain, and immune to bleeding or loss of limb. You will also be immune to Damage Manipulation if relating to physical harm of the body. Unless you are Immortal, the only way to kill you would be to affect you on a deeper level than just the material body, such as the mind, emotions or soul.", price: "200",user: user)
