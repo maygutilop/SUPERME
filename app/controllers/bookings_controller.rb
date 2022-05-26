@@ -2,7 +2,7 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @superpower = Superpower.find(params[:superpower_id])
-    @booking.superpower
+    @booking.superpower = @superpower
     @booking.user = current_user
     if @booking.save
       redirect_to profile_path
