@@ -1,3 +1,6 @@
+<%
+=begin%>
+
 <div class="pic" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path @superpower.photo.key, height: 300, width: 400, crop: :fill %>)">
 
   <div class="container">
@@ -24,6 +27,44 @@
 
 <div class="icons">
 
+  <%= link_to new_superpower_path do %>
+  <i class="fas fa-plus-circle"></i>
+  <% end %>
+
+
+  <%= link_to root_path do %>
+  <i class="fas fa-home"></i>
+  <% end %>
+</div>
+
+<%
+=end %>
+
+
+<div class="superpower-show">
+  <div class="superpower-show-img">
+    <%= cl_image_tag @superpower.photo.key, crop: :fill %>
+  </div>
+    <div class="superpower-show-info">
+      <h1><%= @superpower.name.upcase %></h1>
+      <div class="superpower-show-info-description">
+        <p><%= @superpower.description %></p>
+      </div>
+      <div class="superpower-show-info-important">
+      <p><%= @superpower.price%> €/day</p>
+      <p>avg rewviw</p>
+      </div>
+    <div class="btn-book-frame">
+      <%= link_to '<button class="btn-book btn-book-flat"><span>Book now</span></button>'.html_safe, superpowers_path %>
+    </div>
+    <div class="superpower-show-info-owner">
+      <p><%= @superpower.user.username%></p>
+      <img src="https://ae01.alicdn.com/kf/H4e4fd984ea3c439d89a0b5afa2934307b/Full-Square-Round-Drill-5D-Diy-Diamond-Painting-Superhero-Deadpool-Than-heart-humor-Cross-Stitch-Wedding.jpg_Q90.jpg_.webp" class="card-superpower-user avatar-bordered">
+    </div>
+  </div>
+</div>
+
+<div class="icons-show">
   <%= link_to new_superpower_path do %>
   <i class="fas fa-plus-circle"></i>
   <% end %>

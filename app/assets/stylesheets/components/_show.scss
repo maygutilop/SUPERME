@@ -1,0 +1,149 @@
+.superpower-show {
+  display: flex;
+  width: 73vw;
+  margin: 0 auto;
+  margin-top: 35px;
+}
+
+.superpower-show-img {
+  width: 35%;
+}
+
+.superpower-show-img img {
+  width: 100%;
+}
+
+.superpower-show-info{
+  width: 65%;
+  margin: 40px;
+}
+
+.superpower-show-info h1 {
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 24px;
+  font-weight: 300;
+}
+
+.superpower-show-info p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+
+.superpower-show-info-description {
+  text-align: justify;
+}
+
+.superpower-show-info-important{
+display: flex;
+justify-content: space-between;
+}
+
+.btn-book-frame {
+  text-align: center;
+  // margin: 10px auto;
+  width: 100%;
+}
+
+.btn-book {
+  color: #fff;
+  border-radius: 3px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+}
+
+.btn-book-flat {
+  background: rgb(0,172,238);
+  width: 100%;
+  padding: 0;
+  border: none;
+  line-height: 44px;
+  margin-bottom: 30px;
+  font-size: 17px;
+
+}
+
+
+.btn-book-flat span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-book-flat:before,
+.btn-book-flat:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+   background: rgba(2,126,251,1);
+  transition: all 0.3s ease;
+}
+.btn-book-flat:before {
+  height: 0%;
+  width: 2px;
+}
+.btn-book-flat:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-book-flat:hover{
+   background: transparent;
+  box-shadow: none;
+}
+.btn-book-flat:hover:before {
+  height: 100%;
+}
+.btn-book-flat:hover:after {
+  width: 100%;
+}
+.btn-book-flat span:hover{
+   color: rgba(2,126,251,1);
+}
+.btn-book-flat span:before,
+.btn-book-flat span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  background: rgba(2,126,251,1);
+  transition: all 0.3s ease;
+}
+.btn-book-flat span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn-book-flat span:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-book-flat span:hover:before {
+  height: 100%;
+}
+.btn-book-flat span:hover:after {
+  width: 100%;
+}
+
+.superpower-show-info-owner {
+  display: flex;
+justify-content: flex-end;
+}
+
+
+.icons-show {
+  display: flex;
+  justify-content: center;
+  margin: 60px;
+}
+
+.superpower-show-info-owner p {
+  margin: 0 10px 0 0;
+  display: flex;
+  align-items: center;
+}
