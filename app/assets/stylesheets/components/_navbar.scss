@@ -67,6 +67,8 @@
 
 .navbar-content-right {
   width: 20vw;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .user-avatar:hover {
