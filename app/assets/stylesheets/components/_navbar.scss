@@ -54,3 +54,17 @@
 .searchInputWrapper > .searchInputIcon {
   right: 0.2rem;
 }
+
+.navbar-content-signed-in {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar-content-logo {
+  width: 20vw;
+}
+
+.navbar-content-right {
+  width: 20vw;
+}
