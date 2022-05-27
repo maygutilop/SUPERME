@@ -44,10 +44,10 @@
                 </p>
               </div>
             </div>
-            <% if @reviews.empty? %>
+            <% if booking.reviews.empty? %>
               <p>Please leave a review!</p>
             <% else %>
-              <% @reviews.each do |review| %>
+              <% booking.reviews.each do |review| %>
                 <p><strong>Review:</strong> <%= review.content %><br>
                 <strong>Rating:</strong> <%= review.rating %></p>
               <% end %>
