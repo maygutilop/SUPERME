@@ -3,6 +3,7 @@
   width: 73vw;
   margin: 0 auto;
   margin-top: 35px;
+  align-items: center;
 }
 
 .superpower-show-img {
@@ -32,11 +33,13 @@
 
 .superpower-show-info-description {
   text-align: justify;
+  margin: 30px 0 25px 0;
 }
 
 .superpower-show-info-important{
 display: flex;
 justify-content: space-between;
+margin-bottom: 25px;
 }
 
 .btn-book-frame {

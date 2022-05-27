@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-6">
-      <h1>Create new superpower</h1>
+      <h1 style="margin-top: 38px;">Create new superpower</h1>
 
       <%= simple_form_for @superpower do |f| %>
         <%= f.input :name %>
@@ -9,8 +9,8 @@
         <%= f.input :price %>
         <%= f.label :image %>
         <%= f.input :photo, as: :file %>
-        <div class="frame">
-          <%= f.button :submit, class: 'custom-btn btn-flat' %>
+        <div class="btns-end frame">
+            <%= f.submit "Create superpower", class: "custom-btn btn-submit" %>
         </div>
 
       <% end %>

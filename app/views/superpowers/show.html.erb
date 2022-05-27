@@ -2,37 +2,47 @@
   <div class="superpower-show-img">
     <%= cl_image_tag @superpower.photo.key, crop: :fill %>
   </div>
-    <div class="superpower-show-info">
-      <h1><%= @superpower.name.upcase %></h1>
-      <div class="superpower-show-info-description">
-        <p><%= @superpower.description %></p>
-      </div>
-      <div class="superpower-show-info-important">
-      <p><%= @superpower.price.to_i%> €/day</p>
-      </div>
-
-    <h4>Book this Superpower</h4>
-    <div class="datepicker-form" data-controller="flatpickr">
-      <%= simple_form_for [ @superpower, @booking ] do |f| %>
-      <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-      <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-      <div class="btn-book-frame">
-      <%= f.submit "Book Superpower", class: "btn-book btn-book-flat" %>
-      </div>
-      <% end %>
+  <div class="superpower-show-info">
+    <h1><%= @superpower.name.upcase %></h1>
+    <div class="superpower-show-info-description">
+      <p><%= @superpower.description %></p>
     </div>
+    <div class="superpower-show-info-important">
+    <p><strong><%= @superpower.price%> €/day</strong></p>
+    <%# <p>Reviews</p> %>
+  </div>
 
     <div class="btn-book-frame">
-      <%= link_to '<button class="btn-book btn-book-flat"><span>Book now</span></button>'.html_safe, superpowers_path %>
+      <a><button type="button" class="btn-book btn-book-flat" data-bs-toggle="modal" data-bs-target="#bookingModal"><span>Book now</span></button></a>
     </div>
 
     <div class="superpower-show-info-owner">
       <%= cl_image_tag @superpower.user.photo.key, class: "avatar-bordered" %>
       <p><%= @superpower.user.username%></p>
     </div>
+
+<%# MODAL %>
+  <div class="datepicker-form" data-controller="flatpickr">
+      <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="bookingModalLabel">Book superpower</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <%= simple_form_for [ @superpower, @booking ] do |form| %>
+              <%= form.input :start_date, as: :string, required: true, input_html: {class: "datepicker"} %>
+              <%= form.input :end_date, as: :string, required: true, input_html: {class: "datepicker"} %>
+              <div style="display: flex; justify-content: center;">
+                <%= form.submit "Book superpower", class: "custom-btn btn-submit", style: "width: 100%"%>
+              </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
   </div>
 </div>
-
-  <div class="btns-end frame">
-    <%= link_to '<button class="custom-btn btn-flat"><span>All Superpowers</span></button>'.html_safe, superpowers_path %>
-  </div>

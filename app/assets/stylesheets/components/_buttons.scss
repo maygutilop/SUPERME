@@ -40,6 +40,22 @@
   border: none;
 }
 
+.btn-submit {
+  background: rgb(0,172,238);
+  width: 222px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+  padding: 0;
+  border: none;
+}
+
+.btn-submit:hover {
+  background: #999898cf;
+  box-shadow: none;
+  color: #f1f1f1;
+}
+
 .btn-flat span {
   position: relative;
   display: block;
@@ -52,7 +68,7 @@
   content: "";
   right: 0;
   top: 0;
-   background: rgba(2,126,251,1);
+  background: rgba(2,126,251,1);
   transition: all 0.3s ease;
 }
 .btn-flat:before {
@@ -64,7 +80,7 @@
   height: 2px;
 }
 .btn-flat:hover{
-   background: transparent;
+  background: transparent;
   box-shadow: none;
 }
 .btn-flat:hover:before {
@@ -74,7 +90,7 @@
   width: 100%;
 }
 .btn-flat span:hover{
-   color: rgba(2,126,251,1);
+  color: rgba(2,126,251,1);
 }
 .btn-flat span:before,
 .btn-flat span:after {
