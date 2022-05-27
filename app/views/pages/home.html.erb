@@ -6,7 +6,7 @@
       <h3>RENT A SUPERPOWER</h3>
       <div class="frame">
         <%# <button><span><%= link_to 'All superpowers', superpowers_path, class: "custom-btn btn-flat"%></span></button>
-        <%= link_to '<button class="custom-btn btn-flat"><span>Browse superpowers</span></button>'.html_safe, superpowers_path %>
+        <%= link_to '<button class="custom-btn btn-flat"><span>Browse Superpowers</span></button>'.html_safe, superpowers_path %>
       </div>
     </div>
   </div>
@@ -14,7 +14,7 @@
 
 <div class="cards-index">
   <ul>
-    <% @superpowers.first(6).each do |superpower| %>
+    <% @superpowers.first(6).shuffle.each do |superpower| %>
       <%= link_to superpower_path(superpower) do %>
         <li>
             <div class="card-superpower">
@@ -27,7 +27,7 @@
                 </div>
                 <%# <%= link_to "See details", superpower_path(superpower) %>
                 <div class="card-superpower-owner">
-                  <img src="https://ae01.alicdn.com/kf/H4e4fd984ea3c439d89a0b5afa2934307b/Full-Square-Round-Drill-5D-Diy-Diamond-Painting-Superhero-Deadpool-Than-heart-humor-Cross-Stitch-Wedding.jpg_Q90.jpg_.webp" class="card-superpower-user avatar-bordered">
+                  <%= cl_image_tag superpower.user.photo.key, class: "avatar-bordered" %>
                   <p><%= superpower.user.username%></p>
                 </div>
               </div>

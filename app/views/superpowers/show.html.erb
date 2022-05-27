@@ -1,7 +1,3 @@
-
-
-
-
 <div class="superpower-show">
   <div class="superpower-show-img">
     <%= cl_image_tag @superpower.photo.key, crop: :fill %>
@@ -12,8 +8,7 @@
         <p><%= @superpower.description %></p>
       </div>
       <div class="superpower-show-info-important">
-      <p><%= @superpower.price%> €/day</p>
-      <p>Reviews</p>
+      <p><%= @superpower.price.to_i%> €/day</p>
       </div>
 
     <h4>Book this Superpower</h4>
@@ -32,8 +27,8 @@
     </div>
 
     <div class="superpower-show-info-owner">
+      <%= cl_image_tag @superpower.user.photo.key, class: "avatar-bordered" %>
       <p><%= @superpower.user.username%></p>
-      <img src="https://ae01.alicdn.com/kf/H4e4fd984ea3c439d89a0b5afa2934307b/Full-Square-Round-Drill-5D-Diy-Diamond-Painting-Superhero-Deadpool-Than-heart-humor-Cross-Stitch-Wedding.jpg_Q90.jpg_.webp" class="card-superpower-user avatar-bordered">
     </div>
   </div>
 </div>
