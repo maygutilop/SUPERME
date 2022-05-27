@@ -7,8 +7,8 @@ class PagesController < ApplicationController
 
   def profile
     @user = current_user
-    @bookings = Booking.all
-    @superpower = Superpower.all
+    @bookings = current_user.bookings
+    @review = Review.new
     @reviews = Review.all
   end
 end
