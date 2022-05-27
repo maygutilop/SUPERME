@@ -20,8 +20,38 @@
   <strong>Price:</strong> <%= (booking.superpower.price).to_i %> €/day
   <br>
   <strong>Total price:</strong> <%= ((booking.superpower.price.to_i) * @duration).to_i %> € </p>
+  <strong>Reviews:</strong> <% if @reviews.empty? %>
+  <p>please leave the review</p>
+  <% else %>
+    <% @reviews.each do |review| %>
+      <p><%= review.content %><br>
+      <%= review.rating %></p>
+    <% end %>
+  <% end %>
+  <br>
+
+        <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: fit-content">
+      Leave a review
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Review</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <%= simple_form_for [ booking, @review ] do |form| %>
+            <%= form.input :content, as: :string %>
+            <%= form.input :rating, as: :integer %>
+            <%= form.submit "create review", class:"btn-primary" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
   <% end %>
 <% end %>
-
-
-
