@@ -1,24 +1,46 @@
-<h1>Hi <%= current_user.username %>! </h1>
-<p> <%= current_user.email %> </p>
 
-<h2><strong>All your bookings</strong></h2>
 
-<% if @bookings.empty? %>
-  <p>You don't have any bookings</p>
-<% else %>
-  <% current_user.bookings.each do |booking| %>
-  <h4> <%= booking.superpower.name %> </h4>
-  <p><strong>Start date:</strong> <%= booking.start_date %>
-  <br>
-  <strong>End date:</strong> <%= booking.end_date %>
-  <br>
-  <strong>Duration:</strong>
-    <% if booking.end_date && booking.start_date %>
-        <%= @duration = (((booking.end_date - booking.start_date).to_i + 1)) %>
-      <% end %>
-  <br>
-  <strong>Price:</strong> <%= (booking.superpower.price).to_i %> €/day
-  <br>
-  <strong>Total price:</strong> <%= ((booking.superpower.price.to_i) * @duration).to_i %> € </p>
+<div class="profile-container">
+  <div class="profile-info">
+    <div class="profile-info-img">
+    <%=  image_tag "https://media.istockphoto.com/vectors/pinup-girl-wearing-sunglasses-vector-id1183718628", class: "avatar-profile", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+    </div>
+    <div class="profile-info-text-container">
+      <div class="profile-info-text">
+        <h1><%= current_user.username %></h1>
+        <p> <%= current_user.email %> </p>
+      </div>
+    </div>
+  </div>
+  <div class="divider">
+    <hr style="width: 85%;">
+  </div>
+  <h2 class="bookings-header">Your bookings</h2>
+
+  <% if @bookings.empty? %>
+    <p>You don't have any bookings</p>
+  <% else %>
+    <div class="profile-bookings">
+      <ul>
+        <% current_user.bookings.each do |booking| %>
+          <% @duration = (((booking.end_date - booking.start_date).to_i + 1)) %>
+          <li>
+            <div class="profile-bookings-card">
+              <%= cl_image_tag booking.superpower.photo.key, height: 300, width: 400, crop: :fill %>
+              <div class="profile-bookings-card-info">
+                  <h4> <%= booking.superpower.name %> </h4>
+                <p><strong>Start date:</strong> <%= booking.start_date %>
+                <br>
+                <strong>End date:</strong> <%= booking.end_date %>
+                <br>
+                <strong>Total price:</strong> <%= ((booking.superpower.price.to_i) * @duration).to_i %> € </p>
+              </div>
+            <% end %>
+          </li>
+        </div>
+      </ul>
+    </div>
   <% end %>
-<% end %>
+
+
+</div>

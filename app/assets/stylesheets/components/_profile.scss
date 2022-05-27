@@ -1,0 +1,61 @@
+.profile-container{
+  background-color: rgb(255, 255, 255);
+  width: 70vw;
+  margin: 38px auto 0 auto;
+  border-radius: 5px;
+}
+
+.profile-info {
+  display: flex;
+}
+
+.profile-info-img {
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-info-text-container {
+  display: flex;
+  align-items: center;
+}
+
+.divider {
+  display: flex;
+  justify-content: center;
+}
+
+.bookings-header {
+  margin-left: 7.5%;
+}
+
+.profile-bookings {
+  width: 85%;
+  margin: 38px auto 38px auto;
+}
+
+.profile-bookings-card {
+  display: flex;
+  overflow: hidden;
+  height: 200px;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+
+.profile-bookings-card img{
+  height: 100%;
+  width: 33%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.profile-bookings ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+  padding: 0;
+}
