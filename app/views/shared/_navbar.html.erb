@@ -1,26 +1,33 @@
 <%# NAVBAR %>
 <div class="navbar">
   <div class="navbar-content">
-    <%= link_to root_path do %>
-      <%= image_tag "logo.png", class: "superme-logo" %>
-    <% end %>
+    <div class="navbar-content-logo">
+      <%= link_to root_path do %>
+        <%= image_tag "logo.png", class: "superme-logo" %>
+      <% end %>
+    </div>
+
     <div class="searchInputWrapper">
       <input class="searchInput" type="text" placeholder='Search'>
     </div>
 
-    <% if user_signed_in? %>
-    <%= link_to 'Create Superpower', new_superpower_path, class: "btn-signup" %>
-      <li class="nav-item dropdown">
-        <%=  image_tag "https://media.istockphoto.com/vectors/pinup-girl-wearing-sunglasses-vector-id1183718628", class: "avatar dropdown-toggle", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-        <div class="dropdown-menu dropdown-menu-end">
-          <%= link_to 'Profile', profile_path, class: "dropdown-item" %>
-          <%= link_to 'All Superpowers', superpowers_path, class: "dropdown-item" %>
-          <%= link_to 'Create New Superpower', new_superpower_path, class: "dropdown-item"%>
-          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+    <div class="navbar-content-right">
+      <% if user_signed_in? %>
+        <div class="navbar-content-signed-in">
+          <%= link_to 'Create Superpower', new_superpower_path, class: "btn-signup" %>
+          <li class="nav-item dropdown">
+            <%=  image_tag "https://media.istockphoto.com/vectors/pinup-girl-wearing-sunglasses-vector-id1183718628", class: "avatar dropdown-toggle", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <div class="dropdown-menu dropdown-menu-end">
+              <%= link_to 'Profile', profile_path, class: "dropdown-item" %>
+              <%= link_to 'All Superpowers', superpowers_path, class: "dropdown-item" %>
+              <%= link_to 'Create New Superpower', new_superpower_path, class: "dropdown-item"%>
+              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+            </div>
+          </li>
         </div>
-      </li>
-      <% else %>
-        <%= link_to 'Log in', new_user_session_path, class: "btn-signup" %>
-      <% end %>
+        <% else %>
+          <%= link_to 'Log in', new_user_session_path, class: "btn-signup" %>
+        <% end %>
+    </div>
   </div>
 </div>
